@@ -1,3 +1,16 @@
 # Flask module
 
 Flask module that adds a user to Keycloak
+
+Usage:
+
+```python
+from flask_keycloak import KeyCloak
+
+app = Flask(__name__)
+app.config.from_pyfile('the-config.cfg')
+kc = KeyCloak(app)
+
+kc.add_user({"patient_id": 3, "clinician": "someone@clinic.com"})
+
+```
